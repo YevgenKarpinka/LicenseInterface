@@ -1,0 +1,25 @@
+{
+  "id": "ea332e87-5bde-4584-a694-720e225073fb",
+  "name": "License Server",
+  "publisher": "TComTech",
+  "version": "16.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "16.0.0.0",
+  "idRanges": [
+    {
+      "from": 71075575,
+      "to": 71075585
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "5.0"
+}
