@@ -1,45 +1,45 @@
-page 71075575 "TCT License List"
+page 71075575 "TEL License List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "TCT License";
-    Caption = 'TCT License List';
+    SourceTable = "TEL License";
+    Caption = 'TEL License List';
     DelayedInsert = true;
 
     layout
     {
         area(Content)
         {
-            repeater(TCTLicensesList)
+            repeater(TELLicensesList)
             {
                 Caption = 'Licenses List';
-                field("TCT Entry No."; Rec."TCT Entry No.")
+                field("TEL Entry No."; Rec."TEL Entry No.")
                 {
                     ToolTip = 'Specifies the value of the Entry No. field.';
                     ApplicationArea = All;
                 }
-                field("TCT Type"; Rec."TCT Type")
+                field("TEL Type"; Rec."TEL Type")
                 {
                     ToolTip = 'Specifies the value of the Type field.';
                     ApplicationArea = All;
                 }
-                field("TCT Tennant Id"; Rec."TCT Tennant Id")
+                field("TEL Tennant Id"; Rec."TEL Tennant Id")
                 {
                     ToolTip = 'Specifies the value of the Tennant Id field.';
                     ApplicationArea = All;
                 }
-                field("TCT Expiration Date"; Rec."TCT Expiration Date")
+                field("TEL Expiration Date"; Rec."TEL Expiration Date")
                 {
                     ToolTip = 'Specifies the value of the Expiration Date field.';
                     ApplicationArea = All;
                 }
-                field("TCT Name"; Rec."TCT Name")
+                field("TEL Name"; Rec."TEL Name")
                 {
                     ToolTip = 'Specifies the value of the Name field.';
                     ApplicationArea = All;
                 }
-                field("TCT Contact Info."; Rec."TCT Contact Info.")
+                field("TEL Contact Info."; Rec."TEL Contact Info.")
                 {
                     ToolTip = 'Specifies the value of the Contact Info. field.';
                     ApplicationArea = All;
@@ -52,18 +52,18 @@ page 71075575 "TCT License List"
     {
         area(Processing)
         {
-            action(TCTGetTennantId)
+            action(TELGetTennantId)
             {
                 ApplicationArea = All;
 
                 trigger OnAction()
                 begin
-                    Message(TCTTennantIdLbl, Database.TenantId());
+                    Message(TELTennantIdLbl, Database.TenantId());
                 end;
             }
         }
     }
 
     var
-        TCTTennantIdLbl: Label 'Tennant Id %1';
+        TELTennantIdLbl: Label 'Tennant Id %1';
 }
